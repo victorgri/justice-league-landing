@@ -1,10 +1,10 @@
 .hero {
-  background-image: url(../../img/aboutBackground.jpg);
+  background-image: url(./img/aboutBackground.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   @include onLargeScreen {
     height: 764px;
-    background-image: url(../../img/aboutBackground.jpg);
+    background-image: url(./img/aboutBackground.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 50% 100%;

@@ -5,11 +5,12 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    background-image: url(../../img/reg/register.png);
+    background-image: url(./img/reg/register.png);
     background-repeat: no-repeat;
     background-size: fill;
 
     @include onDesktop {
+      width: auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between;

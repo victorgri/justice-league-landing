@@ -485,6 +485,7 @@
 }
 @media (min-width: 1020px) {
   .register__inner {
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
