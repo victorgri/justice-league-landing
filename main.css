@@ -159,14 +159,14 @@
 }
 
 .hero {
-  background-image: url(../img/aboutBackground.jpg);
+  background-image: url(./img/aboutBackground.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
 @media (min-width: 1200px) {
   .hero {
     height: 764px;
-    background-image: url(../img/aboutBackground.jpg);
+    background-image: url(./img/aboutBackground.jpg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 50% 100%;
@@ -479,7 +479,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-image: url(../img/reg/register.png);
+  background-image: url(./img/reg/register.png);
   background-repeat: no-repeat;
   background-size: fill;
 }
