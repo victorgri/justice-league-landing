@@ -1,0 +1,83 @@
+.genres {
+  margin-top: 100px;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 27px;
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 27px;
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 198px);
+      gap: 27px;
+    }
+
+  }
+
+  &__card {
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--title {
+      color: #fff;
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 20px;
+    }
+
+    &--1 {
+      background: rgb(253,9,63);
+      background: linear-gradient(90deg, rgba(253,9,63,1) 50%, rgba(243,131,241,1) 100%);
+    }
+
+    &--2 {
+      background: rgb(15,255,218);
+      background: linear-gradient(90deg, rgba(15,255,218,1) 50%, rgba(60,219,119,1) 100%);
+    }
+
+    &--3 {
+      background: rgb(185,54,255);
+      background: linear-gradient(90deg, rgba(185,54,255,1) 50%, rgba(87,222,218,1) 100%);
+    }
+
+    &--4 {
+      background: rgb(253,9,63);
+      background: linear-gradient(90deg, rgba(253,9,63,1) 50%, rgba(251,19,120,1) 100%);
+    }
+
+    &--5 {
+      background: rgb(255,100,114);
+      background: linear-gradient(90deg, rgba(255,100,114,1) 50%, rgba(253,167,93,1) 100%);
+    }
+
+    &--6 {
+      background: rgb(19,84,122);
+      background: linear-gradient(90deg, rgba(19,84,122,1) 50%, rgba(128,208,199,1) 100%);
+    }
+
+    &--7 {
+      background: rgb(255,247,123);
+      background: linear-gradient(90deg, rgba(255,247,123,1) 20%, rgba(255,191,66,1) 100%);
+    }
+
+    &--8 {
+      background: rgb(31,162,255);
+      background: linear-gradient(90deg, rgba(31,162,255,1) 50%, rgba(31,83,92,1) 100%);
+    }
+  }
+}

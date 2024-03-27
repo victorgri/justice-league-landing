@@ -1,0 +1,38 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+
+@import './blocks/header.scss';
+@import './blocks/container.scss';
+@import './blocks/nav.scss';
+@import './blocks/menu.scss';
+@import './blocks/hero.scss';
+@import './blocks/product.scss';
+@import './blocks/genres.scss';
+@import './blocks/actors.scss';
+@import './blocks/soon.scss';
+@import './blocks/register.scss';
+@import './blocks/footer.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $mainBackground;
+}
+
+
+
+.button {
+  font-family: $mainFont;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+
+  margin-top: 55px;
+  padding: 15px 34px;
+  border: 1px solid #326CFF80;
+  background: rgb(38,255,242);
+  background: linear-gradient(90deg, rgba(38,255,242,1) 50%, rgba(50,108,255,1) 100%);
+  border-radius: 24px;
+}

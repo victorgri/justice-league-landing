@@ -1,0 +1,47 @@
+.soon {
+  margin: 94px 0 121px;
+  &__inner {
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      box-shadow: 0 0 10 0 #ffffff;
+    }
+  }
+
+  &__left {
+    width: 100%;
+
+    @include onDesktop {
+      height: 366px;
+    }
+    
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(13,26,115);
+    background: linear-gradient(90deg, rgba(13,26,115,1) 5%, rgba(0,0,0,1) 32%);
+
+    &--title {
+      font-family: $mainFont;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 20px;
+
+      @include onTablet {
+        font-size: 64px;
+      }
+    }
+
+    &--img {
+      padding-top: 71px;
+      width: 294px;
+      height: 148px;
+    }
+  }
+}
