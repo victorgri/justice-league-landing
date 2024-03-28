@@ -1,0 +1,88 @@
+.footer {
+  height: 100%;
+  background-color: #101012;
+  overflow: hidden;
+
+  @include onTablet {
+    height: 300px;
+  }
+
+  @include onDesktop {
+    height: 280px;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 10px;
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 84px;
+      padding: 70px 165px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      @include onTablet {
+        gap: 32px;
+      }
+
+      @include onDesktop {
+        gap: 52px;
+      }
+    }
+  }
+
+  .logo {
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .nav {
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__item {
+      height: 40px;
+
+      @include onDesktop {
+        height: unset; 
+      }
+    }
+    
+    &__link {
+      color: #C2C2C2;
+      font-family: 'Mulish', serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 20px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include onTablet {
+        font-size: 18px;
+      }
+
+      @include onDesktop {
+        font-size: 18px;
+      }
+    }
+  }
+}

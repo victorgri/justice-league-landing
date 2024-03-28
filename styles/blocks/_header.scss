@@ -1,0 +1,227 @@
+
+.header {
+  @include flex-centred;
+  width: 100%;
+  padding: 0 5px 0 5px;
+
+  .nav {
+    @include flex(center, start);
+    width: 100%;
+    flex-wrap: wrap;
+  
+    @include onTablet {
+      @include flex(center, inherit);
+      gap: 10px;
+      flex-wrap: nowrap
+    }
+  
+    @include onDesktop {
+      gap: 0;
+    }
+  
+    .logo {
+      @include flex-centred;
+      margin: 30px 0px 30px 0px;
+      transition: transform 0.3s ease-in-out;
+  
+      @include onTablet {
+        margin: 15px 0px 15px 0px;
+      }
+
+      @include onDesktop {
+        margin: 15px 0px 15px 0px;
+      }
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+      
+      &-m {
+        @include square(50px);
+        $border: 3px;
+        margin-right: 4px;
+        position: relative;
+        color: #FFF;
+        background: #000;
+        background-clip: padding-box;
+        border: solid $border transparent;
+        border-radius: 12px;
+        text-align: center;
+        font-family: 'Lemon', serif;
+        font-size: 30px;
+        font-weight: 400;
+  
+        @include onDesktop {
+          @include square(70px);
+          margin-right: 14px;
+          font-size: 40px;
+          border-radius: 14px;
+          border: solid 4px transparent;
+        }
+  
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          margin: -$border;
+          border-radius: inherit;
+          background: linear-gradient(to right, #326CFF, #26FFF2);
+        }
+      }
+  
+      &-box {
+        text-align: center;
+        font-family: 'Poppins', serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        
+        @include onTablet {
+          font-size: 40px;
+        }
+      }
+    }
+  
+    &__links {
+      @include flex(center, end);
+      width: 60%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @include onTablet {
+        @include flex(center, center);
+        flex-direction: row;
+        gap: 0px;
+      }
+    
+      @include onDesktop {
+      }
+    }
+  
+    &__link {
+      @include flex-centred;
+      
+      position: relative;
+      flex-wrap: nowrap;
+      text-align: center;
+      font-family: 'Mulish', serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      opacity: 0.5;
+  
+      @include onTablet {
+        padding: 25px 10px;
+      }
+  
+      @include onDesktop {
+        padding: 30px 26px;
+      }
+      
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(317deg, #26FFF2 13.2%, #326CFF 71.54%);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform 0.3s ease-in-out;
+  
+        @include onTablet {
+          width: 80%;
+          bottom: 15px;
+        }
+  
+        @include onDesktop {
+          width: 60%;
+          bottom: 20px;
+        }
+      }
+  
+      &:hover {
+        opacity: 0.8;
+  
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+  
+      &-active {
+        opacity: 1;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(317deg, #26FFF2 13.2%, #326CFF 71.54%);
+          transform: scaleX(1);
+          transform-origin: 0 50%;
+          transition: transform 0.3s ease-in-out;
+  
+          @include onTablet {
+            width: 70%;
+            bottom: 15px;
+          }
+  
+          @include onDesktop {
+            width: 50%;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+  
+    &__actions {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      
+      @include onTablet {
+        @include flex-centred;
+        flex-direction: row;
+        gap: 0;
+        width: auto;
+      }
+    
+      @include onDesktop {
+        @include flex-centred;
+      }
+    }
+  
+    &__action {
+      @include flex(center, space-between);
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+  
+      :hover {
+        opacity: 0.8;
+      }
+  
+      &-link {
+        padding: 10px 30px;
+  
+        @include onTablet {
+          padding: 26px 20px;
+        }
+    
+        @include onDesktop {
+          padding: 38px 23px;
+        }
+      }
+      .icon {
+        @include square(24px);
+      }
+    }
+  }
+}
+

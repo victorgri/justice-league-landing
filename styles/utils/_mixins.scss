@@ -1,0 +1,34 @@
+@mixin square ($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin flex-centred() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin onMobile {
+  @media (min-width: 360px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

@@ -1,0 +1,196 @@
+.hero-background-mobile-tablet {
+  background-image: url("./../images/poster1.webp");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  @include onDesktop {
+    background:none;
+  }
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.527);
+    z-index: -1;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  position: relative;
+
+  &__content {
+    background-size: cover;
+    padding: 30px 10px 30px;
+
+    @include onTablet {
+      max-width: 562px;
+      padding: 70px 10px 100px 50px;
+    }
+
+    @include onDesktop {
+      padding: 122px 0 203px 5px;
+      box-shadow: 100px 0px 100px 0px #000;
+    }
+  }
+
+  &__headline {
+    margin-bottom: 52px;
+    font-family: 'Marcellus', serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    
+    @include onTablet {
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 50px;
+    }
+
+    @include onDesktop {
+      height: 161px;
+      margin-bottom: 32px;
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 70px;
+    }
+  }
+
+	&__details {
+    @include flex(center, center); 
+    margin-bottom: 35px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 10px;
+    font-family: 'Mulish', serif;
+
+    @include onTablet {
+      justify-content: space-evenly;
+    }
+
+    @include onDesktop {
+      @include flex(center, start);
+      margin-bottom: 25px;
+    }
+  }
+
+  &__year {
+    margin-right: 20px;
+
+    @include onTablet {
+      margin-right: 40px;
+    }
+  }
+
+  &__age-category {
+    @include flex(center, center);
+    position: relative;
+    height: 24px;
+    width: 60px;
+    margin-right: 19px;
+    $border: 1.5px;
+    border-radius: 50px;
+    border: solid $border transparent;
+    background-clip: padding-box;
+    background: linear-gradient(to right, #326CFF, #26FFF2);
+    text-align: center;
+    line-height: 12px;
+    z-index: 1;
+    
+    &:before {
+      height: 18px;
+      width: 54px;
+      position: absolute;
+      content: '';
+      z-index: -1;
+      border-radius: inherit;
+      background: #000;
+    }
+  }
+
+  &__duration {
+    margin-right: 41px;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+  }
+
+	&__summary {
+    margin-bottom: 35px;
+    color: #e4e3e3;
+    font-family: 'Mulish', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @include onTablet {
+      line-height: 28px;
+    }
+
+    @include onDesktop {
+      color: #C2C2C2;
+      line-height: 28px;
+    }
+  }
+
+  &__buttons {
+    @include flex(center, space-around);
+    opacity: 0.9;
+
+    @include onDesktop {
+      @include flex(center, start);
+      gap: 30px;
+      opacity: 1;
+    }
+  }
+
+  &__bg-desktop-poster {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      min-width: 66%;
+      left: 569px;
+      background-image: url("./../images/poster1.webp");
+      background-size: contain;
+      background-position: center 13%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgb(30, 30, 30);
+    }
+  }
+
+  &__underline {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      height: 2px; 
+      position: absolute;
+      left: -204px;
+      bottom: 0;
+      background: #2F2E2E;
+      left: -336px;
+      content: '';
+      z-index: 1;
+      left: -80px;
+      min-width: 111%;
+    }
+  }
+}

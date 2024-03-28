@@ -1,0 +1,236 @@
+.popular {
+  padding: 0px 5px 30px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include onDesktop {
+    padding: 0px 5px 100px 5px;
+    gap: 70px;
+  }
+
+  &__genres {
+    .slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    
+      &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        transition: transform 0.3s;
+
+        @include onTablet {
+          gap: 14px;
+        }
+
+        @include onDesktop {
+          gap: 27px;
+        }
+      }
+    
+      &__item {
+        @include flex(center, center);
+        gap: 8px;
+        flex-direction: column;
+        width: calc(95% / 3);
+        height: 120px;
+        border-radius: 20px;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 0px 12px -5px #26FFF2;
+        }
+  
+        @include onTablet {
+          height: 140px;
+          width: calc(94% / 4);
+        }
+  
+        @include onDesktop {
+          height: 198px;
+        }
+
+        &-scifi {
+          position: relative;
+        }
+
+        &-fake {
+          border-radius: 80px;
+          background: #333333;
+          padding: 30px;
+          scale: 0.8;
+
+          @include onTablet {
+            display: none;
+          }
+
+          &:hover {
+            transform: none;
+            box-shadow: none;
+          }
+        }
+      }
+
+      &__svg {
+        @include square(80px);
+        &-scifi {
+          @include square(90px);
+          position: absolute;
+          top: 0px;
+          left: 0px;
+
+          &-text {
+            position: absolute;
+            bottom: 16px;
+          }
+
+          @include onTablet {
+            top: 0px;
+            left: 30px;
+            &-text {
+              bottom: 22px;
+            }
+          }
+
+          @include onDesktop {
+            top: 25px;
+            left: 110px;
+
+            &-text {
+              bottom: 50px;
+            }
+          }
+        }
+      }
+
+      &__category {
+        font-family: 'Mulish', serif;
+        font-size: 16px;
+        line-height: 10px;
+        font-weight: 700;
+
+        @include onTablet {
+          font-size: 20px;
+          line-height: 14px;
+        }
+
+        @include onDesktop {
+          font-size: 28px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  &__actors {
+    .slider {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+  
+      &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        transition: transform 0.3s;
+  
+        @include onTablet {
+          flex-wrap: nowrap;
+          gap: 8px;
+        }
+      
+        @include onDesktop {
+          gap: 60px;
+        }
+      }
+      
+      &__item {
+        @include flex(center, start);
+        position: relative;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: background-color 0.5s;
+          opacity: 0;
+          border-radius: 20px;
+        }
+
+        &:hover::before {
+          border-radius: 20px;
+          opacity: 1;
+        }
+
+        @include onTablet {
+          gap: 16px;
+        }
+
+        @include onDesktop {
+          gap: 20px;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+
+          @include flex(center, center);
+          & > *:nth-child(1) {
+            background-color: rgba(0, 0, 0, 1);
+          }
+
+          & > *:nth-child(2) { 
+            display:flex;
+            position: absolute;
+          }
+        }
+      }
+
+      &__photo {
+        @include square(100px);
+        border-radius: 100%;
+        background-size: cover;
+        fill: #C4C4C4;
+
+        @include onTablet {
+          @include square(120px);
+        }
+
+        @include onDesktop {
+          @include square(190px);
+        }
+      }
+
+      &__name {
+        display: none;
+        text-align: center;
+        font-family: 'Mulish', serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+
+        @include onTablet {
+          display: block;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

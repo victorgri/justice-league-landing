@@ -1,0 +1,47 @@
+.main {
+  color: #FFF;
+
+  &__headline {
+    @include flex-centred;
+    width: fit-content;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      margin-bottom: 40px;
+    }
+
+    &-gradient {
+      width: 6px;
+      height: 26px;
+      margin-right: 8px;
+      background: $brand-gradient;
+      border-radius: 20px;
+
+      @include onTablet {
+        width: 8px;
+        height: 35px;
+        margin-right: 11px;
+      }
+    }
+
+    &-text {
+      margin-right: 8px;
+      font-family: 'Mulish', serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 20px;
+
+      @include onTablet {
+        font-size: 24px;
+      }
+
+      @include onDesktop {
+        font-size: 28px;
+      }
+    }
+    .icon {
+      @include square(20px);
+      padding-top: 2px;
+    }
+  }
+}
